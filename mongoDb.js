@@ -14,7 +14,7 @@ const useUnifiedTopology = { useUnifiedTopology: true };
 MongoClient.connect(url, useUnifiedTopology, (err, client) => {
     if (err) throw err;
 
-    console.log('Database created by sir.gregg');
+    console.log(`Database created by sir.gregg ==== database name is ${dbName}`);
 
     const db = client.db(dbName);
     
