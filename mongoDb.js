@@ -1,6 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const { insertDocuments, myMovies } = require('./interns');
 const { findFirstCollection, findAllCollection, findMovies } = require('./findInterns');
+const { updateMovie } = require('./updateInterns');
 
 // connection url
 const url = 'mongodb://localhost:27017';
@@ -39,7 +40,7 @@ MongoClient.connect(url, useUnifiedTopology, (err, client) => {
         client.close()
     });
 
-    // updateMovie(db, () => {
-    //     client.close()
-    // });
+    updateMovie(db, () => {
+        client.close()
+    });
 });

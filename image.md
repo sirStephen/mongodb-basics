@@ -9,3 +9,7 @@
 
 ## movies title
 <img src='./img/moviestitle.png'>
+
+## update movie
+<img src='./img/updatemovie.png'>
+

@@ -14,7 +14,12 @@ const updateMovie = (db) => {
     , (err, result) => {
         if (err) throw err;
 
-        console.log(result.matchedCount);
+        return result;
+    })
+
+    const findUpDate = updateMovie.findOne({}, (err, result) => {
+        if (err) throw err;
+        console.log(result);
     })
 }
 
